@@ -28,6 +28,7 @@ export default function Footer() {
                         <h4 className={styles.sectionTitle}>Quick Links</h4>
                         <ul className={styles.linksList}>
                             <li><a href="#layanan">Layanan</a></li>
+                            <li><a href="#testimonial">Testimonial</a></li>
                             <li><a href="#faq">FAQ</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
