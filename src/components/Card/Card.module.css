@@ -1,12 +1,11 @@
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom default */
   gap: 2rem;
-  padding: 2rem 1rem;
+  justify-items: center; /* agar item ke tengah */
   max-width: 1072px;
-  margin: 0 auto;
-  margin-top: 5rem;
-  justify-content: center;
+  margin: 5rem auto 0 auto;
+  padding: 2rem 1rem;
 }
 
 .cardContainer {
@@ -15,7 +14,9 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: center;
-  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 320px; /* Sama seperti testimonialCard */
+  transition: transform 0.3s ease;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -24,7 +25,7 @@
 }
 
 .cardIcon {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cardTitle {
@@ -49,13 +50,13 @@
   background-color: #1e40af;
 }
 
-/* Tablet: 2 kolom */
+/* Tablet: 2 kolom dan center item ke-3 */
 @media (min-width: 640px) and (max-width: 1023px) {
   .cardGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .middleCard {
+  .cardContainer:nth-child(3) {
     grid-column: span 2;
     justify-self: center;
   }

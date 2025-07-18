@@ -23,7 +23,7 @@
 .navbarBackgroundBlur {
     position: absolute;
     inset: -8px;
-    background: linear-gradient(to top right, #2563eb, #d8b4fe, #22d3ee);
+    background: linear-gradient(to top right, #ffffff, #f9fafb, #e5e7eb);
     filter: blur(40px);
     opacity: 0.5;
     z-index: -1;
