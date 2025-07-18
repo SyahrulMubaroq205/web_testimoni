@@ -21,7 +21,7 @@ export default function Navbar() {
 
                 <div className={styles.navbarRight}>
                     <button className={styles.mobileToggle} onClick={toggleMenu}>
-                        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                        {menuOpen ? <X /> : <Menu />}
                     </button>
                 </div>
 

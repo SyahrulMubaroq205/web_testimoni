@@ -3,6 +3,7 @@ import Contact from "../components/Contact/Contact";
 import Faq from "../components/Faq/Faq";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 export default function Home() {
     return (
@@ -12,6 +13,11 @@ export default function Home() {
             <section id="layanan">
                 <Card />
             </section>
+
+            <section id="testimonial">
+                <Testimonial />
+            </section>
+
 
             <section id="faq">
                 <Faq />

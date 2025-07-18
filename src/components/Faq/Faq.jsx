@@ -30,35 +30,46 @@ const faqData = [
 ];
 
 export default function Faq() {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndexes, setActiveIndexes] = useState([]);
 
     const toggleFAQ = (index) => {
-        setActiveIndex(index === activeIndex ? null : index);
+        setActiveIndexes((prev) =>
+            prev.includes(index)
+                ? prev.filter((i) => i !== index)
+                : [...prev, index]
+        );
     };
 
     return (
         <div className={styles.faqContainer}>
             <h2 className={styles.faqTitle}>FAQ</h2>
             <div className={styles.timeline}>
-                {faqData.map((item, index) => (
-                    <div key={index} className={styles.timelineItem}>
-                        <div className={styles.timelineDot} />
-                        <div className={styles.timelineLine} />
-                        <div className={styles.faqBox} onClick={() => toggleFAQ(index)}>
-                            <div className={styles.questionRow}>
-                                <h3 className={styles.faqQuestion}>{item.question}</h3>
-                                {activeIndex === index ? (
-                                    <ChevronDown className={styles.icon} />
-                                ) : (
-                                    <ChevronRight className={styles.icon} />
+                {faqData.map((item, index) => {
+                    const isActive = activeIndexes.includes(index);
+                    
+                    return (
+                        <div key={index} className={styles.timelineItem}>
+                            <div className={styles.timelineDot} />
+                            <div className={styles.timelineLine} />
+                            <div
+                                className={styles.faqBox}
+                                onClick={() => toggleFAQ(index)}
+                            >
+                                <div className={styles.questionRow}>
+                                    <h3 className={styles.faqQuestion}>{item.question}</h3>
+                                    {isActive ? (
+                                        <ChevronDown className={styles.icon} />
+                                    ) : (
+                                        <ChevronRight className={styles.icon} />
+                                    )}
+                                </div>
+                                {isActive && (
+                                    <p className={styles.faqAnswer}>{item.answer}</p>
                                 )}
                             </div>
-                            {activeIndex === index && (
-                                <p className={styles.faqAnswer}>{item.answer}</p>
-                            )}
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );

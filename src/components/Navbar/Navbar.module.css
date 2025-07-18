@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     z-index: 50;
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
@@ -16,6 +17,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 1rem 1.5rem;
     z-index: 10;
+    min-height: 64px;
 }
 
 .navbarBackgroundBlur {
@@ -52,6 +54,7 @@
     text-decoration: none;
     color: black;
     transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
 .navbarMenu li a:hover {
@@ -70,6 +73,12 @@
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.25rem;
+}
+
+.mobileToggle svg {
+    width: 28px;
+    height: 28px;
 }
 
 @media (min-width: 768px) {
@@ -92,7 +101,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
     padding: 1rem 0;
     font-weight: 600;
     list-style: none;
@@ -102,6 +111,8 @@
 .mobileMenu ul li a {
     text-decoration: none;
     color: black;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
     transition: color 0.3s ease;
 }
 

@@ -1,10 +1,24 @@
 .contactContainer {
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 4rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contactCard {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  max-width: 480px;
+  width: 100%;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-4px);
 }
 
 .title {
@@ -25,6 +39,7 @@
   font-weight: 500;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 .whatsappButton:hover {
